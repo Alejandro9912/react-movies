@@ -1,10 +1,15 @@
 const MovieCard = (props) => {
-  const { name } = props;
+  const { name, onCheckTimeClick } = props;
+
+  const handleClick = () => {
+    console.log(`Time for ${name}`);
+    onCheckTimeClick(name);
+  };
   return (
     <li>
       <article>
         <h3>{name}</h3>
-        <button>Check Times</button>
+        <button onClick={handleClick}>Check Times</button>
       </article>
     </li>
   );
