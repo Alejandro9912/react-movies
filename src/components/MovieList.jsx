@@ -1,18 +1,13 @@
-const MovieList = () => {
+import MovieCard from "./MovieCard";
+
+const MovieList = (props) => {
+  const { list } = props;
   return (
     <ul>
-      <li>
-        <article>
-          <h3>Lord of the Rings</h3>
-          <button>Check Times</button>
-        </article>
-      </li>
-      <li>
-        <article>
-          <h3>Back to the Future</h3>
-          <button>Check Times</button>
-        </article>
-      </li>
+      {list.map((movie) => (
+        // eslint-disable-next-line react/jsx-key
+        <MovieCard name={movie.name} />
+      ))}
     </ul>
   );
 };
