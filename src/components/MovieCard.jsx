@@ -1,5 +1,5 @@
 const MovieCard = (props) => {
-  const { name, onCheckTimeClick } = props;
+  const { name, onCheckTimeClick, isFavourite } = props;
 
   const handleClick = () => {
     console.log(`Time for ${name}`);
@@ -9,7 +9,7 @@ const MovieCard = (props) => {
     <li>
       <article>
         <h3>{name}</h3>
-        <button onClick={handleClick}>Check Times</button>
+        <button onClick={handleClick}>{isFavourite ? "❤️" : "🖤"}</button>
       </article>
     </li>
   );
