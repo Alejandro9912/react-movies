@@ -8,17 +8,11 @@ const latestMovies = [
   { name: "Thor" },
 ];
 
-const childrenMovies = [
-  { name: "Minions" },
-  { name: "Alice in Wonderland" },
-  { name: "Elements" },
-];
 function App() {
   return (
     <>
       <Header />
       <MovieList list={latestMovies} />
-      <MovieList list={childrenMovies} />
     </>
   );
 }
